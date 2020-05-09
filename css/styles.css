@@ -1,0 +1,294 @@
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-slab-regular - latin */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/roboto-slab-v11-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/roboto-slab-v11-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* oleo-script-swash-caps-regular - latin */
+@font-face {
+  font-family: "Oleo Script Swash Caps";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oleo Script Swash Caps"), local("OleoScriptSwashCaps-Regular"),
+    url("../fonts/oleo-script-swash-caps-v7-latin-regular.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/oleo-script-swash-caps-v7-latin-regular.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* gelasio-italic - latin */
+@font-face {
+  font-family: "Gelasio";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Gelasio Italic"), local("Gelasio-Italic"),
+    url("../fonts/gelasio-v1-latin-italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/gelasio-v1-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --main-color: #222;
+  --text-color: #777;
+  --accent-color: #fed136;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fff;
+  font-family: var(--main-font);
+  font-size: 0.875rem;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* HEADER START*/
+
+.page-header {
+  padding-top: 42px;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-logo {
+  font-family: "Oleo Script Swash Caps", serif;
+  color: var(--accent-color);
+  font-size: 1.625rem;
+  line-height: 2.5625rem;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.site-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-menu-item-link {
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.site-menu-item:not(:last-of-type) {
+  margin-right: 40px;
+}
+
+.site-menu-item-link:hover {
+  color: var(--accent-color);
+  transition: 0.2s;
+}
+
+/* HEADER END*/
+
+/* SERVICES START*/
+
+.services {
+  padding-top: 116px;
+  padding-bottom: 120px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.section-subtitle {
+  font-family: "Gelasio", serif;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 78px;
+}
+
+.section-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-list-item {
+  text-align: center;
+  flex-basis: 290px;
+}
+
+.section-list-item::before {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 72px;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 26px;
+}
+
+.section-list-item:first-child::before {
+  background-image: url(../img/icon/icon-basket.png);
+}
+
+.section-list-item:nth-child(2)::before {
+  background-image: url(../img/icon/icon-laptop.png);
+}
+
+.section-list-item:last-child::before {
+  background-image: url(../img/icon/icon-lock.png);
+}
+
+.section-list-item-title {
+  font-size: 1.125rem;
+  color: var(--main-color);
+  letter-spacing: -0.45px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section-list-item-description {
+  font-family: "Roboto Slab", serif;
+  letter-spacing: -0.35px;
+}
+
+/* SERVICES END*/
+
+/* FOOTER START*/
+
+.page-footer {
+  background-color: var(--main-color);
+  background-image: url(../img/map.png);
+  background-repeat: no-repeat;
+  background-position: right bottom 20px;
+  padding-top: 106px;
+  padding-bottom: 114px;
+}
+
+.footer-title {
+  color: #fff;
+}
+
+.contact-form-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.contact-form-block-wrapper {
+  width: calc(50% - 15px);
+  flex-wrap: wrap;
+}
+
+.contact-form-item {
+  font-family: var(--main-font);
+  font-size: 0.875rem;
+  letter-spacing: -0.35px;
+  font-weight: 700;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding-left: 20px;
+}
+
+.contact-form-input {
+  width: 100%;
+  height: 54px;
+}
+
+.contact-form-input:not(:last-of-type) {
+  margin-bottom: 28px;
+}
+
+.contact-form-textarea {
+  width: calc(50% - 15px);
+  resize: none;
+  padding-top: 18px;
+}
+
+.contact-form-item::placeholder {
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+.contact-form-item:focus {
+  outline: none;
+}
+
+.contact-form-item:required:focus:valid:not(:placeholder-shown) {
+  border: 2px solid green;
+}
+
+.contact-form-item:required:focus:invalid:not(:placeholder-shown) {
+  border: 2px solid red;
+}
+
+.contact-form-btn {
+  display: block;
+  background-color: var(--accent-color);
+  border: none;
+  width: 240px;
+  height: 66px;
+  border-radius: 3px;
+  color: #fff;
+  font-family: var(--main-font);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.contact-form-btn:hover {
+  background-color: #ffc800;
+  transition: 0.2s linear;
+}
+
+/* FOOTER END*/
